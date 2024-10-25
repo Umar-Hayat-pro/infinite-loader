@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper .loader{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 20px;
+}
+
+.wrapper .loader .loading {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: load 0.8s ease infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 
+                0 0 20px rgba(255, 255, 255, 0.4), 
+                0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.wrapper .loader .loading.one{
+    animation-delay: 0.3s;
+}
+.wrapper .loader .loading.two{
+    animation-delay: 0.4s;
+}
+.wrapper .loader .loading.three{
+    animation-delay: 0.5s;
+}
+.wrapper .loader .loading.four{
+    animation-delay: 0.6s;
+}
+
+@keyframes load {
+    0%{
+        width: 30px;
+        height: 30px;
+    }
+    50%{
+        width: 20px;
+        height: 20px;
+    }
+    
+}
